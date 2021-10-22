@@ -4,6 +4,10 @@
   padding-bottom: 50px;
 }
 
+.section-name {
+  color: orangered;
+}
+
 .pricing-title {
   color: orangered;
   font-size: 30px;

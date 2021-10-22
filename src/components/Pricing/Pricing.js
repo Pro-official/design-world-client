@@ -1,43 +1,37 @@
-import React from "react";
-import { Card, Col, Row } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Row } from "react-bootstrap";
+import IndividualPricing from "./IndividualPricing";
 import "./Pricing.css";
 
 const Pricing = () => {
+  const [pricings, setPricings] = useState([]);
+
+  useEffect(() => {
+    const pricings = "pricing.json";
+    fetch(pricings)
+      .then((res) => res.json())
+      .then((data) => setPricings(data));
+  }, []);
+
   return (
     <div className="pricing">
+      <div className="container mb-4 text-center  text-white">
+        <h1 className="section-name">Choose Your Plan</h1>
+        <p>
+          Choose the right plan for your body and mind and get our best support.
+        </p>
+      </div>
       <div className="container">
         <Row xs={1} md={3} className="g-4">
-          <Col>
-            <Card className="text-white pricing-card text-center">
-              <Card.Body className="p-4">
-                <Card.Title className="fw-bold pricing-title">$40</Card.Title>
-                <hr />
-                <Card.Text>Quarterly Plan</Card.Text>
-                <hr />
-                <Card.Text>Quarterly Plan</Card.Text>
-                <hr />
-                <Card.Text>Quarterly Plan</Card.Text>
-                <hr />
-                <Card.Text>Quarterly Plan</Card.Text>
-                <Card.Text>Quarterly Plan</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card>
-              <Card.Img variant="top" src="holder.js/100px160" />
-              <Card.Body>
-                <Card.Title>Card title</Card.Title>
-                <Card.Text>
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+          {pricings.map((pricing) => (
+            <IndividualPricing
+              key={pricing.id}
+              pricing={pricing}
+            ></IndividualPricing>
+          ))}
         </Row>
       </div>
+      <hr />
     </div>
   );
 };

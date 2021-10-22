@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home/Home";
 import "./App.css";
 import Login from "./components/LogIn/Login";
+import IndividualService from "./components/Service/IndividualService";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route exact path="/home">
             <Home></Home>
+          </Route>
+          <Route path="/details/:serviceId">
+            <IndividualService></IndividualService>
           </Route>
           <Route exact path="/about">
             <About></About>

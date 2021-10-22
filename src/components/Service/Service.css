@@ -31,3 +31,22 @@
   border: none;
   border-radius: 10px;
 }
+
+.ind_service {
+  margin-top: 50px;
+}
+
+.service__container {
+  background-color: black;
+  padding: 10px;
+}
+
+.back {
+  background-color: orangered;
+  color: white;
+  font-weight: 600;
+  padding: 7px 15px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}

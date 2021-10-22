@@ -31,6 +31,7 @@ const Services = () => {
             ))}
           </div>
         </div>
+        <hr />
       </div>
     </div>
   );
