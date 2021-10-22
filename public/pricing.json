@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "price": 40,
+    "name": "Quarterly Plan",
+    "instructor": "Group Instructor",
+    "diet": "No Diet Plan",
+    "wifi": "Free Wifi"
+  },
+  {
+    "id": 2,
+    "price": 70,
+    "name": "Professional Plan",
+    "instructor": "Personal Instructor",
+    "diet": "Diet Plan",
+    "wifi": "Free Wifi"
+  },
+  {
+    "id": 3,
+    "price": 100,
+    "name": "Legend Plan",
+    "instructor": "High Prfessional Instructor",
+    "diet": "Special Diet Plan",
+    "wifi": "Free Wifi"
+  }
+]

@@ -1,0 +1,17 @@
+.bar {
+  background-color: black;
+}
+.link {
+  color: white !important;
+  font-weight: 600;
+}
+.logout {
+  background-color: orangered;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.toggle {
+  background-color: white;
+}
