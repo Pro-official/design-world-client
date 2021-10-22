@@ -13,7 +13,7 @@ const Header = () => {
         variant="dark"
         collapseOnSelect
         expand="lg"
-        fixed="top"
+        sticky="top"
       >
         <Container>
           <Navbar.Brand href="#home">

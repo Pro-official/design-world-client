@@ -26,18 +26,18 @@ const Products = () => {
           </Col>
           <Col className="text-center text-white">
             <img className="mb-4" src={pd2} alt="" />
-            <h1 className="fs-4">Protein 100% Raw</h1>
-            <p>$80</p>
+            <h1 className="fs-4">Weight Gainer</h1>
+            <p>$85</p>
           </Col>
           <Col className="text-center text-white">
             <img className="mb-4" src={pd3} alt="" />
-            <h1 className="fs-4">Protein 100% Raw</h1>
-            <p>$80</p>
+            <h1 className="fs-4">Gold Standard Whey</h1>
+            <p>$90</p>
           </Col>
           <Col className="text-center text-white">
             <img className="mb-4" src={pd4} alt="" />
-            <h1 className="fs-4">Protein 100% Raw</h1>
-            <p>$80</p>
+            <h1 className="fs-4">Serious Mass</h1>
+            <p>$100</p>
           </Col>
         </Row>
       </div>

@@ -7,6 +7,7 @@ import Home from "./components/Home/Home";
 import "./App.css";
 import Login from "./components/LogIn/Login";
 import IndividualService from "./components/Service/IndividualService";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Login></Login>
           </Route>
         </Switch>
+        <Footer></Footer>
       </BrowserRouter>
     </div>
   );
