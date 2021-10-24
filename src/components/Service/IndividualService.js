@@ -37,7 +37,7 @@ const IndividualService = () => {
           <p>{select?.description}</p>
           <br />
           <Link to="/home">
-            <button className="back">Go to Home</button>
+            <button className="back">Back to Home</button>
           </Link>
         </div>
       </div>

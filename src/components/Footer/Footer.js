@@ -69,11 +69,8 @@ const Footer = () => {
                 <Nav.Link className="link" as={Link} to="/pricing">
                   Pricing
                 </Nav.Link>
-                <Nav.Link className="link" as={Link} to="/login">
-                  Login
-                </Nav.Link>
                 <Nav.Link className="link" as={Link} to="/registration">
-                  Register
+                  Register / Login
                 </Nav.Link>
               </Nav>
             </div>

@@ -4,8 +4,11 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import img from "../../../src/images/logo.png";
 import "./Header.css";
+import useAuth from "./../../hooks/useAuth";
 
 const Header = () => {
+  const { user, logOut } = useAuth();
+
   return (
     <div className="bar">
       <Navbar
@@ -16,14 +19,16 @@ const Header = () => {
         sticky="top"
       >
         <Container>
-          <Navbar.Brand href="#home">
-            <img
-              alt="logo"
-              src={img}
-              width="50"
-              height="50"
-              className="d-inline-block align-top"
-            />{" "}
+          <Navbar.Brand>
+            <Link to="/">
+              <img
+                alt="logo"
+                src={img}
+                width="50"
+                height="50"
+                className="d-inline-block align-top"
+              />
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle
             Navbar-light
@@ -41,21 +46,26 @@ const Header = () => {
               <Nav.Link className="link" as={Link} to="/about">
                 About
               </Nav.Link>
-              <Nav.Link className="link" as={Link} to="/pricing">
-                Pricing
-              </Nav.Link>
-              <Nav.Link className="link" as={Link} to="/login">
-                Login
-              </Nav.Link>
-              <Nav.Link className="link" as={Link} to="/registration">
-                Register
+              <Nav.Link className="link" as={Link} to="/contactus">
+                Contact Us
               </Nav.Link>
             </Nav>
-
-            <Navbar.Text className="me-2 link">Great Promise</Navbar.Text>
-            <Link>
-              <Button className="logout">Log Out</Button>
-            </Link>
+            {!user.email ? (
+              <Nav.Link className="link" as={Link} to="/registration">
+                Register / Login
+              </Nav.Link>
+            ) : (
+              <div>
+                <Navbar.Text className="me-2 link">
+                  {user?.displayName}
+                </Navbar.Text>
+                <Link to="">
+                  <Button onClick={logOut} className="logout">
+                    Log Out
+                  </Button>
+                </Link>
+              </div>
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>
