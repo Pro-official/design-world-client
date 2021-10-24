@@ -52,7 +52,7 @@ const Header = () => {
               </Nav.Link>
             </Nav>
 
-            <Navbar.Text className="me-2 link">Mark Otto</Navbar.Text>
+            <Navbar.Text className="me-2 link">Great Promise</Navbar.Text>
             <Link>
               <Button className="logout">Log Out</Button>
             </Link>
