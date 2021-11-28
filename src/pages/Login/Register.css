@@ -1,0 +1,35 @@
+.card {
+  width: 80%;
+}
+
+.logo {
+  width: 200px;
+  margin-top: 40px;
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 50%;
+}
+
+.register-button {
+  width: 80px;
+  background-color: #b22121;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 15px;
+}
+
+.g-login {
+  background-color: transparent;
+  border: 1px solid gray;
+  color: black;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px 15px;
+  margin-bottom: 20px;
+}

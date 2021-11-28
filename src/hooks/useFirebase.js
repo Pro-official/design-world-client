@@ -11,7 +11,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
-import initializeAuthentication from "./../components/Firebase/Firebase.init";
+import initializeAuthentication from "./../pages/Shared/Firebase/Firebase.init";
 
 initializeAuthentication();
 
