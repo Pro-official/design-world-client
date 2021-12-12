@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Alert } from "react-bootstrap";
+import useAuth from "./../../../hooks/useAuth";
 
 const division = {
   backgroundColor: "#34353a",
@@ -24,6 +25,7 @@ const AddDesign = () => {
   const categoryRef = useRef();
   const imgRef = useRef();
   const describeRef = useRef();
+  const { user } = useAuth();
 
   const handleSubmit = (e) => {
     console.log("Hi");
@@ -33,7 +35,14 @@ const AddDesign = () => {
     const img = imgRef.current.value;
     const description = describeRef.current.value;
 
-    const newPlan = { name, author, category, description, img };
+    const newPlan = {
+      name,
+      author,
+      category,
+      description,
+      img,
+      authorPic: user.photoURL,
+    };
 
     fetch("http://localhost:5000/designs", {
       method: "POST",
@@ -92,13 +101,14 @@ const AddDesign = () => {
               className="form-control"
               id="floatingPassword"
               placeholder="author"
+              value={user.displayName}
               ref={authorRef}
             />
             <label className="ms-5" for="floatingPassword">
               Author
             </label>
           </div>
-          <div className="form-floating mb-3">
+          {/* <div className="form-floating mb-3">
             <input
               type="text"
               className="form-control"
@@ -109,6 +119,24 @@ const AddDesign = () => {
             <label className="ms-5" for="floatingPassword">
               Category
             </label>
+          </div> */}
+          <div className="form-floating mb-3">
+            <select
+              type="text"
+              className="form-control"
+              placeholder="rating"
+              ref={categoryRef}
+              required
+              style={{ width: "90%", marginLeft: "auto", marginRight: "auto" }}
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option selected>Typography</option>
+              <option value="Illustration">Illustration</option>
+              <option value="Vector">Vector</option>
+              <option value="Photoshop">Photoshop</option>
+              <option value="UI/UX">UI/UX</option>
+            </select>
           </div>
           <div className="form-floating mb-3">
             <input

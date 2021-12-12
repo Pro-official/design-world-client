@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Login from "./pages/Login/Login";
 import Registration from "./pages/Login/Registration";
 import PrivateRoute from "./pages/Shared/PrivateRoute/PrivateRoute";
+import IndividualDesign from "./pages/Home/Designs/IndividualDesign";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
             </Route>
             <Route path="/home">
               <Home></Home>
+            </Route>
+            <Route path="/designs/:id">
+              <IndividualDesign></IndividualDesign>
             </Route>
             <Route path="/explore">
               <Explore></Explore>
