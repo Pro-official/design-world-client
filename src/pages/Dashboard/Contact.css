@@ -1,0 +1,48 @@
+.form {
+  background-color: #2e2f34;
+  height: 100vh;
+  text-align: center;
+}
+.form h2 {
+  padding-top: 100px;
+  font-size: 1em;
+  font-family: "sora", sans-serif;
+  color: #00ffff;
+}
+.form h6 {
+  font-size: 1.5em;
+  font-family: "sora", sans-serif;
+  color: white;
+}
+.contact-form {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  width: 50%;
+}
+.contact-form:hover {
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+}
+.form-control {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+.label-control {
+  margin-left: 35px;
+}
+.form-button {
+  background-color: transparent;
+  color: #00ffff;
+  font-family: "sora", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: 1px solid #00ffff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 35px;
+}

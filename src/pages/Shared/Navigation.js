@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../images/Group.png";
 import { Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import useAuth from "./../../hooks/useAuth";
 
 const NavStyle = {
   backgroundColor: "#B22121",
@@ -35,10 +36,16 @@ const LogButton = {
   padding: "0 15px",
   height: "40px",
   borderRadius: "15px",
-  marginRight: "20px",
+  marginRight: "5px",
+};
+const photoStyle = {
+  width: "40px",
+  clipPath: "circle()",
 };
 
 const Navigation = () => {
+  const { user, logout } = useAuth();
+
   return (
     <div style={NavStyle}>
       <Navbar collapseOnSelect expand="lg" className="ms-5 me-5">
@@ -62,25 +69,36 @@ const Navigation = () => {
             <NavLink style={NavLinks} to="/home">
               HOME
             </NavLink>
-            <NavLink to="#">
-              <button style={LogButton}>Logout</button>
-            </NavLink>
-
             <NavLink style={NavLinks} to="/explore">
               EXPLORE
             </NavLink>
-            <NavLink style={NavLinks} to="/findwork">
-              FIND WORK
-            </NavLink>
-            <NavLink style={NavLinks} to="/learndesign">
-              LEARN DESIGN
-            </NavLink>
-            <NavLink to="/dashboard">
-              <button style={DashButton}>Dashboard</button>
-            </NavLink>
-            <NavLink to="/login">
-              <button style={LogButton}>Login</button>
-            </NavLink>
+            {user?.email ? (
+              <div>
+                <NavLink style={NavLinks} to="/findwork">
+                  FIND WORK
+                </NavLink>
+                <NavLink style={NavLinks} to="/learndesign">
+                  LEARN DESIGN
+                </NavLink>
+                <NavLink to="/dashboard">
+                  <button style={DashButton}>Dashboard</button>
+                </NavLink>
+                <NavLink to="#">
+                  <button onClick={logout} style={LogButton}>
+                    Logout
+                  </button>
+                </NavLink>
+                {user?.photoURL ? (
+                  <img style={photoStyle} src={user?.photoURL} alt="" />
+                ) : (
+                  <p></p>
+                )}
+              </div>
+            ) : (
+              <NavLink to="/login">
+                <button style={LogButton}>LOGIN</button>
+              </NavLink>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

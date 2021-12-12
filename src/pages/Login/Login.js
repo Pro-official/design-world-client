@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import Navigation from "../Shared/Navigation";
 import "./Register.css";
-import { Card } from "react-bootstrap";
+import { Alert, Card, Spinner } from "react-bootstrap";
 import "./Register.css";
 import cover from "../../images/cover.png";
 import logo from "../../images/Group.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useHistory } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import useAuth from "./../../hooks/useAuth";
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
-  const { user } = useAuth();
+  const { user, loginUser, signInWithGoogle, isLoading } = useAuth();
+
+  const location = useLocation();
+  const history = useHistory();
 
   const handleOnChange = (e) => {
     const field = e.target.name;
@@ -21,9 +24,11 @@ const Login = () => {
     setLoginData(newLoginData);
   };
   const handleLoginSubmit = (e) => {
-    alert("Login Successful");
+    loginUser(loginData?.email, loginData?.password, location, history);
     e.preventDefault();
-    console.log("submit");
+  };
+  const handleGoogleLogin = () => {
+    signInWithGoogle(location, history);
   };
 
   const divSytle = {
@@ -53,6 +58,10 @@ const Login = () => {
                 <form onSubmit={handleLoginSubmit}>
                   <Card.Body>
                     <Card.Title>Login Here...</Card.Title>
+                    {isLoading && <Spinner animation="grow" />}
+                    {user?.email && (
+                      <Alert variant={"successful"}>Login Successful</Alert>
+                    )}
                     <Card.Text>
                       Need an account?{" "}
                       <NavLink
@@ -94,7 +103,7 @@ const Login = () => {
                     ------------------ Or ------------------
                   </p>
                 </form>
-                <button className="g-login">
+                <button onClick={handleGoogleLogin} className="g-login">
                   <span className="fs-4">
                     <FcGoogle />
                   </span>{" "}
