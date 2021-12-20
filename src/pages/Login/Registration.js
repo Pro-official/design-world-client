@@ -63,7 +63,13 @@ const Registration = () => {
                         <Card.Title>Register here...</Card.Title>
                         {isLoading && <Spinner animation="grow" />}
                         {user?.email && (
-                          <Alert variant={"successful"}>Login Successful</Alert>
+                          <Alert
+                            style={{ backgroundColor: "#b22121" }}
+                            className="text-white fw-bold"
+                            variant="successful"
+                          >
+                            Login Successful
+                          </Alert>
                         )}
                         <Card.Text>
                           Have an account?{" "}
@@ -84,7 +90,9 @@ const Registration = () => {
                             name="name"
                             onBlur={handleOnBlur}
                           />
-                          <label for="floatingInput">Your Name</label>
+                          <label className="ms-4" htmlFor="floatingInput">
+                            Your Name
+                          </label>
                         </div>
                         <div className="form-floating mb-3">
                           <input
@@ -96,7 +104,9 @@ const Registration = () => {
                             name="email"
                             onBlur={handleOnBlur}
                           />
-                          <label for="floatingInput">Email address</label>
+                          <label className="ms-4" htmlFor="floatingInput">
+                            Email address
+                          </label>
                         </div>
                         <div className="form-floating mb-3">
                           <input
@@ -108,7 +118,9 @@ const Registration = () => {
                             name="password"
                             onBlur={handleOnBlur}
                           />
-                          <label for="floatingPassword">Password</label>
+                          <label className="ms-4" htmlFor="floatingPassword">
+                            Password
+                          </label>
                         </div>
                         <div className="form-floating">
                           <input
@@ -120,11 +132,16 @@ const Registration = () => {
                             name="password2"
                             onBlur={handleOnBlur}
                           />
-                          <label for="floatingPassword">Retype Password</label>
+                          <label
+                            className="ms-4"
+                            htmlFor="floatingPassword password2"
+                          >
+                            Retype Password
+                          </label>
                         </div>
                       </Card.Body>
                       <input
-                        className="mb-2 register-button"
+                        className="ms-4 mb-2 register-button"
                         type="submit"
                         value="Register"
                       />

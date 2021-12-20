@@ -9,6 +9,7 @@ import * as IoMdLogOut from "react-icons/io";
 import * as MdRateReview from "react-icons/md";
 import * as IoMdAddCircle from "react-icons/io";
 import * as RiAdminFill from "react-icons/ri";
+import * as BsSaveFill from "react-icons/bs";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
 import { IconContext } from "react-icons";
@@ -63,12 +64,12 @@ const Dashboard = (props) => {
                 <span>Loved</span>
               </Link>
             </li>
-            {/* <li className="nav-text">
-              <Link to={`${url}/mostloved`}>
-                <AiFillHeart.AiFillHeart />
-                <span>Most Loved</span>
+            <li className="nav-text">
+              <Link to={`${url}/saved`}>
+                <BsSaveFill.BsSaveFill />
+                <span>Saved</span>
               </Link>
-            </li> */}
+            </li>
             <li className="nav-text">
               <Link to={`${url}/review`}>
                 <MdRateReview.MdRateReview />
@@ -121,6 +122,9 @@ const Dashboard = (props) => {
             <DashHome></DashHome>
           </Route>
           <Route exact path={`${path}/loved`}>
+            <Loved></Loved>
+          </Route>
+          <Route exact path={`${path}/saved`}>
             <Loved></Loved>
           </Route>
           <Route exact path={`${path}/review`}>

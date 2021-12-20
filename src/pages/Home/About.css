@@ -1,0 +1,72 @@
+.about-container {
+  padding-top: 300px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.about-text {
+  width: 70%;
+}
+
+.about-h2 {
+  margin-top: 20px;
+  width: 90%;
+  font-family: "Neuton", serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.about-h2 span {
+  color: #00d4ff;
+  margin-left: 5px;
+}
+
+.about-para {
+  margin-top: 20px;
+  width: 85%;
+  font-size: 1.1rem;
+  font-family: "sora", sans-serif;
+  color: #8497a9;
+}
+
+.about-image img {
+  width: 100%;
+  /* margin-left: -100px; */
+}
+
+.about-button {
+  margin-top: 20px;
+  background-color: #00d4ff;
+  color: black;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+}
+
+.about-button:hover {
+  background-color: white;
+  color: black;
+}
+.about-button:active {
+  background-color: #00d4ff;
+  padding: 10px 30px;
+  color: black;
+}
+
+.about-top {
+  font-family: "sora", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #00d4ff;
+}
+
+@media screen and (max-width: 850px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+  }
+}

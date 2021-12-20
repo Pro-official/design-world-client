@@ -34,6 +34,8 @@ const AddDesign = () => {
     const category = categoryRef.current.value;
     const img = imgRef.current.value;
     const description = describeRef.current.value;
+    const authorPic = user.photoURL;
+    const email = user.email;
 
     const newPlan = {
       name,
@@ -41,7 +43,9 @@ const AddDesign = () => {
       category,
       description,
       img,
-      authorPic: user.photoURL,
+      authorPic,
+      email,
+      // visited: 0,
     };
 
     fetch("http://localhost:5000/designs", {
@@ -108,18 +112,6 @@ const AddDesign = () => {
               Author
             </label>
           </div>
-          {/* <div className="form-floating mb-3">
-            <input
-              type="text"
-              className="form-control"
-              id="floatingPassword"
-              placeholder="category"
-              ref={categoryRef}
-            />
-            <label className="ms-5" for="floatingPassword">
-              Category
-            </label>
-          </div> */}
           <div className="form-floating mb-3">
             <select
               type="text"

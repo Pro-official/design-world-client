@@ -36,7 +36,7 @@ const LogButton = {
   padding: "0 15px",
   height: "40px",
   borderRadius: "15px",
-  marginRight: "5px",
+  marginRight: "20px",
 };
 const photoStyle = {
   width: "40px",

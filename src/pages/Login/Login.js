@@ -80,7 +80,9 @@ const Login = () => {
                         name="email"
                         onChange={handleOnChange}
                       />
-                      <label for="floatingInput">Email address</label>
+                      <label className="ms-4" htmlFor="floatingInput">
+                        Email address
+                      </label>
                     </div>
                     <div className="form-floating">
                       <input
@@ -91,7 +93,9 @@ const Login = () => {
                         name="password"
                         onChange={handleOnChange}
                       />
-                      <label for="floatingPassword">Password</label>
+                      <label className="ms-4" htmlFor="floatingPassword">
+                        Password
+                      </label>
                     </div>
                   </Card.Body>
                   <input
