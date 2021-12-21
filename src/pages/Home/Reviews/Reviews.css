@@ -1,0 +1,11 @@
+.review-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.slide-img img {
+  width: 900px;
+  height: 500px;
+}

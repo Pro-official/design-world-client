@@ -21,7 +21,9 @@ const Designs = () => {
       <div className="row design-style row-cols-1 ros-cols-sm-1 row-cols-md-2 row-cols-lg-4 gx-1 gx-md-0 gx-lg-0">
         {loading ? (
           designs.map((design) => (
-            <Design key={design._id} design={design}></Design>
+            <>
+              <Design key={design._id} design={design}></Design>
+            </>
           ))
         ) : (
           <div className="api-loader">

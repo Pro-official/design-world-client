@@ -5,6 +5,8 @@ import Designs from "./Designs/Designs";
 import { XlviLoader } from "react-awesome-loaders";
 import "../../App.css";
 import About from "./About";
+import TopDesign from "./TopDesign";
+// import Reviews from "./Reviews/Reviews";
 
 const Home = () => {
   const [loading, setLoading] = React.useState(false);
@@ -30,6 +32,8 @@ const Home = () => {
           <Banner></Banner>
           <Designs></Designs>
           <About></About>
+          <TopDesign></TopDesign>
+          {/* <Reviews></Reviews> */}
         </>
       )}
     </>
