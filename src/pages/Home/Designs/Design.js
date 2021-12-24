@@ -24,7 +24,6 @@ const Design = ({ design }) => {
   } else {
     // console.log("nothing to do");
   }
-  // console.log(lover.length);
 
   const handleCount = () => {
     const image = [img];
@@ -60,7 +59,7 @@ const Design = ({ design }) => {
               </div>
             </Link>
             <div
-              style={{ margin: "0 -12px" }}
+              style={{ margin: "0 -10px" }}
               className="card-body d-flex justify-content-between text-align-center"
             >
               <h6 className="card-title">{name.slice(0, 20)}</h6>

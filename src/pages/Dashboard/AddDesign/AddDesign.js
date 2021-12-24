@@ -128,6 +128,8 @@ const AddDesign = () => {
               <option value="Vector">Vector</option>
               <option value="Photoshop">Photoshop</option>
               <option value="UI/UX">UI/UX</option>
+              <option value="UI/UX">Abstract</option>
+              <option value="UI/UX">Architecture</option>
             </select>
           </div>
           <div className="form-floating mb-3">

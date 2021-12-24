@@ -1,5 +1,5 @@
 .row {
-  margin-left: 60px;
+  margin-left: 70px;
 }
 
 .api-loader {
@@ -8,6 +8,33 @@
   display: flex;
   flex-direction: column;
   padding: 30px;
+}
+
+.filter-button {
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "sora", sans-serif;
+  color: gray;
+}
+.filter-button:hover {
+  color: black;
+  font-weight: bolder;
+}
+
+.filter-button:focus {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #b22121;
+}
+
+.selected-all {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #b22121;
 }
 
 .design {
@@ -29,7 +56,9 @@
   transition: all 0.3s ease-out;
   background: radial-gradient(#111 50%, #000 100%);
   border: none;
+  height: 410px;
   border-radius: 10px;
+  border-bottom: #b22121 solid 1px;
 }
 
 .ui-card:hover {
@@ -47,6 +76,7 @@
 }
 
 .ui-card .description {
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -58,6 +88,7 @@
 }
 
 .ui-card .card-body {
+  height: 30px;
   background-color: white;
   color: black;
 }
@@ -70,7 +101,7 @@ p {
 
 .indi-author {
   font-family: "sora", sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 1px;
 }
 
@@ -94,7 +125,7 @@ p {
 
 .indi-description h5 {
   font-family: "sora", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.5;
 }
@@ -153,8 +184,7 @@ p {
     margin-left: 60px;
     margin-right: auto;
   }
-  /* .row {
-    margin-left: 50px;
-    margin-right: auto;
-  } */
+  .design-nav {
+    display: none;
+  }
 }

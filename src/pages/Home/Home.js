@@ -6,6 +6,7 @@ import { XlviLoader } from "react-awesome-loaders";
 import "../../App.css";
 import About from "./About";
 import TopDesign from "./TopDesign";
+import Footer from "./Footer/Footer";
 // import Reviews from "./Reviews/Reviews";
 
 const Home = () => {
@@ -15,7 +16,7 @@ const Home = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 500);
   }, []);
   return (
     <>
@@ -34,6 +35,7 @@ const Home = () => {
           <About></About>
           <TopDesign></TopDesign>
           {/* <Reviews></Reviews> */}
+          <Footer></Footer>
         </>
       )}
     </>

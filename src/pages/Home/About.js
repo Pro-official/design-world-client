@@ -16,7 +16,7 @@ const articleStyle = {
 
 const About = () => {
   return (
-    <article style={articleStyle}>
+    <article id="about" style={articleStyle}>
       <article className="d-flex justify-content-center align-items-center about-container">
         <article className="text-white about-text">
           <h5 className="about-top">Developed for Designers</h5>

@@ -1,25 +1,44 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import "./topdesign.css";
+// import gallery from "./pricing.json"
 
 const TopDesign = () => {
   return (
     <Container className="text-center top-container">
       <hr />
       <div>
-        <h1 className="top-title">Our Top Design</h1>
+        <h1 className="top-title">Our Top Designs</h1>
         <p className="top-para">
-          Our most Loved design award goes to<span>...</span>
+          Our most loved picture gallery is here<span>...</span>
         </p>
       </div>
-      <article className="top-design">
-        <div className="top-img">
-          <img src="https://i.imgur.com/w7SBbG4.jpg" alt="" />
+      <article className="gallery-design">
+        <div class="container-gallery">
+          <div class="row g-0">
+            <div class="col-lg-6 col-md-6 col-sm-12 top-img">
+              <img src="https://i.imgur.com/9UL1AEq.jpg" alt="" />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 top-img">
+              <img src="https://i.imgur.com/CdtnbvS.jpg" alt="" />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 top-img">
+              <img src="https://i.imgur.com/RRnoB6g.jpg" alt="" />
+            </div>
+          </div>
+          <div class="row g-0">
+            <div class="col-lg-4 col-md-6 col-sm-12 top-img">
+              <img src="https://i.imgur.com/DqOEt9L.jpg" alt="" />
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12 top-img">
+              <img src="https://i.imgur.com/w7SBbG4.jpg" alt="" />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 top-img">
+              <img src="https://i.imgur.com/dSf8rCY.jpg" alt="" />
+            </div>
+          </div>
         </div>
-        {/* <div className="top-description text-start ps-4">
-          <h2>Name: Hospitality</h2>
-          <h4>Author: Debojoti Apurba</h4>
-        </div> */}
+        <hr />
       </article>
     </Container>
   );

@@ -47,12 +47,6 @@ const Login = () => {
       <div className="register">
         <div style={divSytle}>
           <div className="row">
-            <div className="col col-md-6 col-sm-12 text-center my-5">
-              <img className="logo" src={logo} alt="" />
-              <p className="text-white">
-                A GLOBAL COMMUNITY FOR ARTISTIC MINDS
-              </p>
-            </div>
             <div className="col col-6 my-5">
               <Card style={{ width: "32rem" }}>
                 <form onSubmit={handleLoginSubmit}>
@@ -114,6 +108,12 @@ const Login = () => {
                   Continue With Google
                 </button>
               </Card>
+            </div>
+            <div className="col col-md-6 col-sm-12 text-center my-5">
+              <img className="logo" src={logo} alt="" />
+              <p className="text-white">
+                A GLOBAL COMMUNITY FOR ARTISTIC MINDS
+              </p>
             </div>
           </div>
         </div>

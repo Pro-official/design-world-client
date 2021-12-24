@@ -22,7 +22,6 @@ const IndividualDesign = () => {
   const [design, setDesign] = React.useState([]);
   const [success, setSuccess] = React.useState(false);
   const [loveSuccess, setLoveSuccess] = React.useState(false);
-  // const [loved, setLoved] = React.useState({});
   const [saved, setSaved] = React.useState([]);
   const { user } = useAuth();
 
