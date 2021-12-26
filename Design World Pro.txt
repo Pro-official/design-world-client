@@ -1,0 +1,18 @@
+Technology used: 
+1. ReactJs
+2. Firebase 
+3. NodeJs 
+4. Mongodb
+5. React Bootstrap
+6. React Router Dom 
+
+Installed packages: 
+
+1. react bootstrap
+2. firebase 
+3. react awesome loaders 
+4. react router dom 
+5. react icons 
+6. react spiners
+7. formspree
+8. React Typewriter

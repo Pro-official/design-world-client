@@ -42,7 +42,7 @@ const Designs = () => {
   return (
     <div id="designs">
       <hr style={{ width: "75%", marginLeft: "auto", marginRight: "auto" }} />
-      <div className="text-center mb-5 mt-5 design-nav">
+      <div data-aos="flip-up" className="text-center mb-5 mt-5 design-nav">
         <NavLink
           onClick={() => FilterAllDesign(designs)}
           activeClassName="selected-all"
@@ -102,7 +102,10 @@ const Designs = () => {
           Architecture
         </NavLink>
       </div>
-      <div className="row design-style row-cols-1 ros-cols-sm-1 row-cols-md-2 row-cols-lg-4 g-0">
+      <div
+        data-aos="fade-down"
+        className="row design-style row-cols-1 ros-cols-sm-1 row-cols-md-2 row-cols-lg-4 g-0"
+      >
         {loading ? (
           designs
             .map((design) => (

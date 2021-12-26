@@ -18,7 +18,11 @@ const About = () => {
   return (
     <article id="about" style={articleStyle}>
       <article className="d-flex justify-content-center align-items-center about-container">
-        <article className="text-white about-text">
+        <article
+          data-aos="fade-down"
+          data-aos-duration="3000"
+          className="text-white about-text"
+        >
           <h5 className="about-top">Developed for Designers</h5>
           <h2 className="about-h2">
             The world's most powerful and easy to access artistic hub
@@ -36,7 +40,11 @@ const About = () => {
             </button>
           </Link>
         </article>
-        <article className="text-white about-image">
+        <article
+          data-aos="zoom-in"
+          data-aos-duration="3000"
+          className="text-white about-image"
+        >
           <img src={about} alt="" />
         </article>
       </article>

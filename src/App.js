@@ -1,5 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AuthProvider from "./Context/AuthProvider";
 import Home from "./pages/Home/Home";
@@ -11,8 +13,17 @@ import Login from "./pages/Login/Login";
 import Registration from "./pages/Login/Registration";
 import PrivateRoute from "./pages/Shared/PrivateRoute/PrivateRoute";
 import IndividualDesign from "./pages/Home/Designs/IndividualDesign";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 1000,
+      easing: "ease",
+    });
+  }, []);
+
   return (
     <div className="App">
       <AuthProvider>

@@ -13,7 +13,12 @@ const TopDesign = () => {
           Our most loved picture gallery is here<span>...</span>
         </p>
       </div>
-      <article className="gallery-design">
+      <article
+        data-aos="fade-right"
+        data-aos-duration="3000"
+        data-aos-easing="ease-in-out"
+        className="gallery-design"
+      >
         <div class="container-gallery">
           <div class="row g-0">
             <div class="col-lg-6 col-md-6 col-sm-12 top-img">

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Banner.css";
 import cover from "../../images/cover.png";
+import TypeWriter from "react-typewriter";
 
 const divSytle = {
   backgroundImage: `url(${cover})`,
@@ -17,10 +18,12 @@ const Banner = () => {
     <>
       <div>
         <div className="text-center" style={divSytle}>
-          <h1 className="cover-text text-white">
+          <h1 data-aos="fade-up" className="cover-text text-white ">
             DESIGN <br /> WORLD
           </h1>
-          <p className="cover-para">A GLOBAL COMMUNITY FOR ARTISTIC MINDS</p>
+          <TypeWriter typing={1}>
+            <p className="cover-para">A GLOBAL COMMUNITY FOR ARTISTIC MINDS</p>
+          </TypeWriter>
         </div>
       </div>
     </>
