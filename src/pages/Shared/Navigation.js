@@ -78,7 +78,7 @@ const Navigation = () => {
                   FIND WORK
                 </NavLink>
                 <NavLink style={NavLinks} to="/learndesign">
-                  LEARN DESIGN
+                  LEARN NEW
                 </NavLink>
                 <NavLink to="/dashboard">
                   <button style={DashButton}>Dashboard</button>

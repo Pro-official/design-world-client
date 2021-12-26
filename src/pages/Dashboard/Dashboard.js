@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-// import Navigation from "../Shared/Navigation";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import * as AiFillHeart from "react-icons/ai";
+// import * as AiFillHeart from "react-icons/ai";
 import * as MdDashboard from "react-icons/md";
 import * as AiFillContacts from "react-icons/ai";
 import * as IoMdLogOut from "react-icons/io";
@@ -17,11 +16,13 @@ import { Switch, Route, useRouteMatch } from "react-router-dom";
 import useAuth from "./../../hooks/useAuth";
 import AuthProvider from "../../Context/AuthProvider";
 import DashHome from "./DashHome/DashHome";
-import Loved from "./Loved/Loved";
+// import Loved from "./Loved/Loved";
 import Review from "./Review/Review";
 import AddDesign from "./AddDesign/AddDesign";
 import NewAdmin from "./NewAdmin/NewAdmin";
 import Contact from "./Contact";
+import Saved from "./Saved/Saved";
+// import AdminRoute from "./../Shared/AdminRoute/AdminRoute";
 
 const Dashboard = (props) => {
   const [sidebar, setSidebar] = useState(false);
@@ -58,12 +59,12 @@ const Dashboard = (props) => {
                 <span>Dashboard</span>
               </Link>
             </li>
-            <li className="nav-text">
+            {/* <li className="nav-text">
               <Link to={`${url}/loved`}>
                 <AiFillHeart.AiFillHeart />
                 <span>Loved</span>
               </Link>
-            </li>
+            </li> */}
             <li className="nav-text">
               <Link to={`${url}/saved`}>
                 <BsSaveFill.BsSaveFill />
@@ -121,11 +122,8 @@ const Dashboard = (props) => {
           <Route exact path={`${path}`}>
             <DashHome></DashHome>
           </Route>
-          <Route exact path={`${path}/loved`}>
-            <Loved></Loved>
-          </Route>
           <Route exact path={`${path}/saved`}>
-            <Loved></Loved>
+            <Saved></Saved>
           </Route>
           <Route exact path={`${path}/review`}>
             <Review></Review>

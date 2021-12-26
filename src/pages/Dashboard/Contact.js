@@ -35,13 +35,11 @@ const Contact = () => {
               Your Name
             </label>
           </div>
-          {/* <label htmlFor="email">Email Address</label>
-      <input id="email" type="email" name="email" /> */}
           <ValidationError prefix="Email" field="email" errors={state.errors} />
           <div className="form-floating">
             <textarea
               className="form-control"
-              placeholder="Leave a comment here"
+              placeholder="Leave a message here"
               id="message"
               name="message"
             ></textarea>
@@ -49,7 +47,6 @@ const Contact = () => {
               Your Messages
             </label>
           </div>
-          {/* <textarea id="message" name="message" /> */}
           <ValidationError
             prefix="Message"
             field="message"

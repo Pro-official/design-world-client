@@ -1,0 +1,10 @@
+.intro {
+  width: 70%;
+  margin: 0 auto;
+}
+.intro h1 {
+  margin-top: 40px;
+  font-family: "sora", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+}

@@ -104,11 +104,13 @@ const Designs = () => {
       </div>
       <div className="row design-style row-cols-1 ros-cols-sm-1 row-cols-md-2 row-cols-lg-4 g-0">
         {loading ? (
-          designs.map((design) => (
-            <>
-              <Design key={design._id} design={design}></Design>
-            </>
-          ))
+          designs
+            .map((design) => (
+              <>
+                <Design key={design._id} design={design}></Design>
+              </>
+            ))
+            .reverse()
         ) : (
           <div className="api-loader">
             <GridLoader loading size={24} color="#B22121" />

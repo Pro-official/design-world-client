@@ -1,0 +1,11 @@
+.find-button button {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  color: #b22121;
+  font-family: "sora", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 10px 15px;
+  margin-top: 100px;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Alert } from "react-bootstrap";
+import useAuth from "./../../../hooks/useAuth";
 
 const LogButton = {
   backgroundColor: "white",
@@ -16,6 +17,8 @@ const LogButton = {
 const NewAdmin = () => {
   const [email, setEmail] = useState("");
   const [success, setSuccess] = useState(false);
+  const { token } = useAuth();
+  // console.log(token);
 
   const handleOnBlur = (e) => {
     setEmail(e.target.value);
@@ -25,6 +28,7 @@ const NewAdmin = () => {
     fetch("http://localhost:5000/users/admin", {
       method: "PUT",
       headers: {
+        authorization: `Bearer ${token}`,
         "content-type": "application/json",
       },
       body: JSON.stringify(user),
@@ -55,7 +59,7 @@ const NewAdmin = () => {
             id="floatingInput"
             placeholder="name@example.com"
           />
-          <label className="ms-5" for="floatingInput">
+          <label className="ms-5" htmlFor="floatingInput">
             Email address
           </label>
           <span>
