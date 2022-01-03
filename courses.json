@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "courseName": "Adobe Photoshop",
+    "instructor": "Promise",
+    "price": "100",
+    "rating": "4.5",
+    "image": "https://i.imgur.com/x0YMm6z.jpg"
+  },
+  {
+    "id": 2,
+    "courseName": "Adobe Illustrator",
+    "instructor": "Fariha",
+    "price": "100",
+    "rating": "5",
+    "image": "https://i.imgur.com/tdRBbDp.png"
+  },
+  {
+    "id": 3,
+    "courseName": "Adobe Premiere Pro",
+    "instructor": "Debojoti",
+    "price": "100",
+    "rating": "4",
+    "image": "https://i.imgur.com/EyuxfFK.jpg"
+  },
+  {
+    "id": 4,
+    "courseName": "Python - Django",
+    "instructor": "Fariha",
+    "price": "100",
+    "rating": "4.5",
+    "image": "https://i.imgur.com/wt8cowN.jpg"
+  },
+  {
+    "id": 5,
+    "courseName": "Blender",
+    "instructor": "Debojoti",
+    "price": "100",
+    "rating": "5",
+    "image": "https://i.imgur.com/I9udxdq.jpg"
+  },
+  {
+    "id": 6,
+    "courseName": "Modern Art",
+    "instructor": "Promise",
+    "price": "100",
+    "rating": "5",
+    "image": "https://i.imgur.com/D5kupsF.jpg"
+  },
+  {
+    "id": 7,
+    "courseName": "Figma",
+    "instructor": "Debojoti",
+    "price": "100",
+    "rating": "5",
+    "image": "https://i.imgur.com/qik95NO.jpg"
+  },
+  {
+    "id": 8,
+    "courseName": "Computer Aided Design",
+    "instructor": "Fariha",
+    "price": "100",
+    "rating": "5",
+    "image": "https://i.imgur.com/nSH0kl2.png"
+  }
+]

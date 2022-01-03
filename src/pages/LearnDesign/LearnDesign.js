@@ -1,30 +1,46 @@
-import React from "react";
-import Navigation from "./../Shared/Navigation";
-import "./LearnDesign.css";
+import React, { useEffect } from "react";
+import Design from "../Home/Designs/Design";
+// import "./Designs.css";
+import { GridLoader } from "react-spinners";
+import { NavLink } from "react-router-dom";
+import LDesign from "./LDesign";
+import Navigation from "../Shared/Navigation";
 
 const LearnDesign = () => {
+  const [designs, setDesigns] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
+  useEffect(() => {
+    fetch("http://localhost:5000/courses")
+      .then((res) => res.json())
+      .then((json) => {
+        setDesigns(json);
+        setLoading(true);
+      });
+  }, []);
+
   return (
-    <>
+    <div id="designs">
       <Navigation></Navigation>
-      <div className="text-center learn-design">
-        <div className="intro">
-          <h1>
-            Learn everything <br /> alongside industry leaders
-          </h1>
-          <p>
-            Looking to level up your design skills? More than a simple webinar
-            or static online course, Dribbble Workshops are live and highly
-            interactive—featuring must-have insights from your favorite design
-            leaders.
-          </p>
-        </div>
-        <div className="row row-cols-1 ros-cols-sm-1 row-cols-md-2 row-cols-lg-4 g-0">
-          <div className="col">
-            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" />
+      <hr style={{ width: "75%", marginLeft: "auto", marginRight: "auto" }} />
+      <div
+        data-aos="fade-down"
+        className="row design-style row-cols-1 ros-cols-sm-1 row-cols-md-2 row-cols-lg-4 g-0"
+      >
+        {loading ? (
+          designs
+            .map((design) => (
+              <>
+                <LDesign key={design._id} design={design}></LDesign>
+              </>
+            ))
+            .reverse()
+        ) : (
+          <div className="api-loader">
+            <GridLoader loading size={24} color="#B22121" />
           </div>
-        </div>
+        )}
       </div>
-    </>
+    </div>
   );
 };
 
