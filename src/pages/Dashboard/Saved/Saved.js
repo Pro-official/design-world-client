@@ -9,7 +9,7 @@ const Saved = () => {
   const { user } = useAuth();
   const email = user?.email;
   useEffect(() => {
-    fetch(`http://localhost:5000/saved/query/${email}`)
+    fetch(`https://radiant-journey-70403.herokuapp.com/saved/query/${email}`)
       .then((res) => res.json())
       .then((data) => setSaved(data));
   }, [email]);

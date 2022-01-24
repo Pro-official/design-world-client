@@ -48,7 +48,7 @@ const AddDesign = () => {
       // visited: 0,
     };
 
-    fetch("http://localhost:5000/designs", {
+    fetch("https://radiant-journey-70403.herokuapp.com/designs", {
       method: "POST",
       headers: {
         "content-type": "application/json",

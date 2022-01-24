@@ -10,7 +10,7 @@ const Explore = () => {
   const [designs, setDesigns] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
   useEffect(() => {
-    fetch("http://localhost:5000/designs")
+    fetch("https://radiant-journey-70403.herokuapp.com/designs")
       .then((res) => res.json())
       .then((json) => {
         setDesigns(json);
@@ -19,7 +19,7 @@ const Explore = () => {
   }, []);
 
   const FilterAllDesign = () => {
-    fetch(`http://localhost:5000/designs`)
+    fetch(`https://radiant-journey-70403.herokuapp.com/designs`)
       .then((res) => res.json())
       .then((json) => {
         setDesigns(json);
@@ -30,7 +30,9 @@ const Explore = () => {
   const FilterDesign = (item) => {
     const condition = designs.map((newDesign) => newDesign.category === item);
     if (condition) {
-      fetch(`http://localhost:5000/designs/filter/?category=${item}`)
+      fetch(
+        `https://radiant-journey-70403.herokuapp.com/designs/filter/?category=${item}`
+      )
         .then((res) => res.json())
         .then((json) => {
           setDesigns(json);

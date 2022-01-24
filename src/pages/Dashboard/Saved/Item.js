@@ -7,7 +7,7 @@ const Item = ({ item }) => {
   const handleDelete = (id) => {
     const sure = window.confirm("Do you want to delete this plan?");
     if (sure) {
-      fetch(`http://localhost:5000/saved/devplan/${id}`, {
+      fetch(`https://radiant-journey-70403.herokuapp.com/saved/devplan/${id}`, {
         method: "DELETE",
         headers: {
           "content-type": "application/json",

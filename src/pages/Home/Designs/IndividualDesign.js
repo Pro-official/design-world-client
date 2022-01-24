@@ -26,14 +26,16 @@ const IndividualDesign = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/saved/desired?designPhoto=${design.img}`)
+    fetch(
+      `https://radiant-journey-70403.herokuapp.com/saved/desired?designPhoto=${design.img}`
+    )
       .then((res) => res.json())
       .then((data) => setSaved(data));
   }, [success, design.img]);
 
   useEffect(() => {
     const fetchData = async () => {
-      await fetch(`http://localhost:5000/designs/${id}`)
+      await fetch(`https://radiant-journey-70403.herokuapp.com/designs/${id}`)
         .then((res) => res.json())
         .then((data) => {
           setDesign(data);
@@ -58,7 +60,7 @@ const IndividualDesign = () => {
 
   const handleLove = () => {
     const info = { email: user?.email };
-    fetch(`http://localhost:5000/designs/${id}`, {
+    fetch(`https://radiant-journey-70403.herokuapp.com/designs/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -82,7 +84,7 @@ const IndividualDesign = () => {
       designAuthor: design?.author,
       designCategory: design?.category,
     };
-    fetch("http://localhost:5000/saved", {
+    fetch("https://radiant-journey-70403.herokuapp.com/saved", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

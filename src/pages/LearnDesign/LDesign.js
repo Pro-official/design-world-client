@@ -1,12 +1,8 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-// import "./Designs.css";
-import * as AiFillHeart from "react-icons/ai";
-import * as AiFillEye from "react-icons/ai";
+import React from "react";
 import * as AiFillStar from "react-icons/ai";
 
 const LDesign = ({ design }) => {
-  const { _id, courseName, instructor, price, rating, image } = design;
+  const { courseName, instructor, price, rating, image } = design;
 
   return (
     <>

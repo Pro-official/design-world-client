@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-import Design from "../Home/Designs/Design";
 // import "./Designs.css";
 import { GridLoader } from "react-spinners";
-import { NavLink } from "react-router-dom";
 import LDesign from "./LDesign";
 import Navigation from "../Shared/Navigation";
 
@@ -10,7 +8,7 @@ const LearnDesign = () => {
   const [designs, setDesigns] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
   useEffect(() => {
-    fetch("http://localhost:5000/courses")
+    fetch("https://radiant-journey-70403.herokuapp.com/courses")
       .then((res) => res.json())
       .then((json) => {
         setDesigns(json);

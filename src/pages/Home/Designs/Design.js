@@ -1,22 +1,22 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Designs.css";
-import * as AiFillHeart from "react-icons/ai";
 import * as AiFillEye from "react-icons/ai";
 
 const Design = ({ design }) => {
-  const { name, img, author, category, _id, lover } = design;
+  const { name, img, author, category, _id } = design;
   const [viewes, setViewes] = React.useState({});
   const [success, setSuccess] = React.useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/viewed")
+    fetch("https://radiant-journey-70403.herokuapp.com/viewed")
       .then((res) => res.json())
       .then((data) => {
         setViewes(data);
         setSuccess(true);
       });
   }, []);
+
   if (success) {
     var newViewes = viewes
       .filter((view) => view.img[0] === img)
@@ -27,7 +27,7 @@ const Design = ({ design }) => {
 
   const handleCount = () => {
     const image = [img];
-    fetch("http://localhost:5000/viewed", {
+    fetch("https://radiant-journey-70403.herokuapp.com/viewed", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -65,10 +65,10 @@ const Design = ({ design }) => {
               <h6 className="card-title">{name.slice(0, 20)}</h6>
               {/* {success && <p>Done!</p>} */}
               <div className="d-flex">
-                <p className="me-2">
+                {/* <p className="me-2">
                   <AiFillHeart.AiFillHeart className="love-icon" />
                   {lover.length}
-                </p>
+                </p> */}
                 {success && (
                   <p className="me-2">
                     <AiFillEye.AiFillEye className="view-icon" />
