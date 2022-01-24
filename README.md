@@ -1,16 +1,26 @@
-# Gym For Pro
+## Design World Pro
 
-This project was made with React and Firebase [Create React App](https://gym-for-pro.web.app/).
+This project was made with React, node, mongodb and Firebase [Live Site](https://design-world-official.web.app/).
 
 ### `Description`
 
-This website is for those people who wants to build their body from the scratch. We are happy to provide the best service one can afford. Try us and find out more.
+Design World is world platoform where everyone can share their creativity. It is a global community for artistic minds. Anyone can share their all kinds of designs like photoshop, illustrations, vector graphics, UI/UX designs and even an architectural model of a building.
 
-#### What Do we do?
+### Technology Used:
 
-- We Have Quality Equipement
-- Healthy Nutrition Plan
-- Shower Service
-- Quality Instructor
-- World Class Decoration
-- Unique to Your Needs
+- ReactJs
+- Firebase
+- NodeJs
+- MongoDB
+- React-Bootstrap
+- React Router Dom
+
+### Other Installed Packages:
+
+- React Awesome Loader
+- React Icons
+- React Spinner
+- Formspree
+- React Typewriter
+- React Rating
+- Animate on scroll
